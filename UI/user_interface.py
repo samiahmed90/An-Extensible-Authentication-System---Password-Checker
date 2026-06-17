@@ -1,6 +1,7 @@
 from Registration.registration import register_user
 from Login.login import login_user
 
+
 def main():
     print("Welcome to the User Registration System")
     while True:

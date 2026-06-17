@@ -1,0 +1,1 @@
+from Password_checker.pwd_check import is_strong_password
