@@ -1,5 +1,6 @@
 from Registration.registration import register_user
 from Login.login import login_user
+from Audit.logs import log_event
 
 
 def main():
@@ -19,6 +20,7 @@ def main():
             login_user()
 
         elif choice == "3":
+            log_event("System exited")
             print("Exiting the system...")
             break
         
