@@ -1,6 +1,8 @@
 # login function
 from Hashed_password.hash import hash_password
 from Audit.audit import log_event
+from Logs.logs import view_logs
+from Logs.logs import post_login_menu
 
 
 def login_user():
@@ -14,8 +16,9 @@ def login_user():
         stored_username, stored_password = user.strip().split(":")
         if username == stored_username and hash_password(password) == stored_password:
             print("Login Successful")
-            log_event(f"{username} successfulyy logged in")
-            return
+            log_event(f"{username} successfully logged in")
+            post_login_menu(username)
+            return username
         
     print("Invalid Username or Password")
     log_event(f"Failed login attempt for the user {username}")

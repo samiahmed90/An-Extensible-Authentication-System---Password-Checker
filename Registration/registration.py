@@ -5,6 +5,16 @@ from Audit.audit import log_event
 def register_user():
 
     username = input ("Please enter a Username:")
+    # check if username already exists
+    with open("users.txt", "a+") as user_file:
+        user_file.seek(0)
+        users = user_file.readlines()
+    
+    for user in users:
+        stored_username = user.strip().split(":")[0]
+        if username == stored_username:
+            print("Username already exists! Please choose another.")
+            return
     password = input ("Please enter a Password:")
 
     is_valid, feedback = is_strong_password(password)
