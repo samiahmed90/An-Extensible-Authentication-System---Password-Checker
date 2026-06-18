@@ -1,7 +1,7 @@
 # rgistration function
 from Password_checker.pwd_check import is_strong_password
 from Hashed_password.hash import hash_password
-from Audit.logs import log_event
+from Audit.audit import log_event
 def register_user():
 
     username = input ("Please enter a Username:")

@@ -1,6 +1,6 @@
 from Registration.registration import register_user
 from Login.login import login_user
-from Audit.logs import log_event
+from Audit.audit import log_event
 
 
 def main():

@@ -1,6 +1,6 @@
 # login function
 from Hashed_password.hash import hash_password
-from Audit.logs import log_event
+from Audit.audit import log_event
 
 
 def login_user():
